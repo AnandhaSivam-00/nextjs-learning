@@ -1,8 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
 import { Montserrat_Alternates, Albert_Sans } from 'next/font/google';
+import NavBar from "./components/NavBar";
 
 const montserrat = Montserrat_Alternates({
   subsets: ['latin'],
@@ -27,26 +26,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${montserrat.variable} ${albert.variable}`}>
       <body>
-        <header>
-          <nav className="flex flex-row justify-between items-center p-5">
-            <div className="hidden md:block">
-              <Image src='/printforge-logo 1.svg' alt="PrintForge Logo" width={150} height={150} />
-            </div>
-            <div className="block md:hidden">
-              <Image src='/printforge-logo mobile.svg' alt="PrintForge Logo - desktop" width={50} height={50} />
-            </div>
-            <ul className="flex flex-row justify-between items-center gap-x-5">
-              <li className="hover:text-gray-500">
-                <Link href="/" prefetch={false}>Home</Link>
-              </li>
-              <li className="hover:text-gray-500">
-                <Link href="/about" prefetch={false}>About</Link>
-              </li>
-            </ul>
-          </nav>
+        <header className="sticky top-0 z-50">
+          <NavBar />
         </header>
           {children}
-        <footer>
+        <footer className="bottom-0">
           <div className="flex justify-center items-center p-5">
             <p className="text-xs text-gray-500">&copy; Copyright 2025 PrintForge</p>
           </div>

@@ -13,7 +13,7 @@ export default function About() {
                     <Image
                         src={aboutImage}
                         alt="Hero image"
-                        className="w-[627px] h-[627px] object-cover rounded-sm"
+                        className="w-[627px] h-[627px] object-cover rounded-lg"
                     />
                 </div>
                 <div className="flex flex-col justify-center items-start gap-y-10">
