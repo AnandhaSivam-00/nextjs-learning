@@ -1,7 +1,9 @@
 import { fetchModelData } from "@/lib/fetchModelData";
 import CardLayout from "../components/Card";
 
-export default async function Models() {
+export default async function Models({ params }: {params: Promise<{}>}) {
+    console.log(await params);
+
     const modelData = await fetchModelData();
 
     return (

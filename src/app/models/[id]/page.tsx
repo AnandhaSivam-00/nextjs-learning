@@ -5,10 +5,7 @@ import Link from "next/link";
 import LikeSymbol from "@/public/Like.svg"
 
 interface ModelProps {
-    params: {
-        id: string;
-    },
-    
+    params: Promise<{ id: string }>;
 }
 
 export default async function Model({ params }: ModelProps) {
