@@ -13,18 +13,18 @@ export default function NavBar() {
     return (
         <nav className="flex flex-row justify-between items-center bg-white">
             <Link href='/' prefetch={false}>
-                <div className="hidden p-2 md:block">
+                <div className="hidden px-2 md:block">
                     <Image src={printforgeLogDesktop} alt="PrintForge Logo - Desktop" width={150} height={150} />
                 </div>
-                <div className="block p-2 md:hidden">
+                <div className="block px-2 md:hidden">
                     <Image src={printforgeLogoMobile} alt="PrintForge Logo - Mobile" width={50} height={50} />
                 </div>
             </Link>
             <ul className="flex flex-row justify-between items-center gap-x-5 me-2">
-                <li className={`p-3 hover:text-gray-500 ${pathName === '/modals' ? 'text-orange-600 border-b-2 border-orange-600' : ''}`}>
-                    <Link href="/models" prefetch={false}>3D Modals</Link>
+                <li className={`p-3 hover:text-gray-500 ${pathName === '/models' ? 'text-orange-600 border-b-2 border-orange-500' : ''}`}>
+                    <Link href="/models" prefetch={false}>3D Models</Link>
                 </li>
-                <li className={`p-3 hover:text-gray-500 ${pathName === '/about' ? 'text-orange-600 border-b-2 border-orange-600' : ''}`}>
+                <li className={`p-3 hover:text-gray-500 ${pathName === '/about' ? 'text-orange-600 border-b-2 border-orange-500' : ''}`}>
                     <Link href="/about" prefetch={false}>About</Link>
                 </li>
             </ul>

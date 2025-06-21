@@ -5,7 +5,7 @@ import heroImage from "@/public/hero-image 1.png";
 export default function Home() {
   return (
     <main className="w-full h-screen">
-      <section className="grid md:grid-cols-2 gap-x-5 gap-y-10 px-10">
+      <section className="grid md:grid-cols-2 gap-x-5 gap-y-10 px-2 md:px-10">
         <div className="flex flex-col justify-center items-start gap-y-10">
           <h5 className="uppercase text-base">Your go-to platform for 3D printing files</h5>
           <h1 className="text-5xl font-bold">Discover what’s possible with 3D printing</h1>
