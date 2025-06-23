@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Montserrat_Alternates, Albert_Sans } from 'next/font/google';
 import NavBar from "./components/NavBar";
+import ReduxProvider from "./redux/ReduxProvider";
 
 const montserrat = Montserrat_Alternates({
   subsets: ['latin'],
@@ -26,10 +27,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${montserrat.variable} ${albert.variable}`}>
       <body>
-        <header className="sticky top-0 z-50">
-          <NavBar />
-        </header>
+        <ReduxProvider>
+          <header className="sticky top-0 z-50">
+            <NavBar />
+          </header>
           {children}
+        </ReduxProvider>
         <footer className="bottom-0">
           <div className="flex justify-center items-center p-5">
             <p className="text-xs text-gray-500">&copy; Copyright 2025 PrintForge</p>

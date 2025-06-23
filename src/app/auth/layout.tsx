@@ -31,9 +31,9 @@ export default function AuthLayout({ children }: Readonly<{ children: React.Reac
                 <Image
                     src={LoginBanner}
                     alt="Login Banner"
-                    className="w-full h-full object-cover"
-                    width={500}
-                    height={500}
+                    className="w-full h-full rounded-md"
+                    width={700}
+                    height={700}
                 />
             </section>
         </main>
